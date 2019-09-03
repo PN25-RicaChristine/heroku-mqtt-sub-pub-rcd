@@ -21,26 +21,17 @@ btnConnect.addEventListener('click', function (e) {
   e.preventDefault();
   //client
   var client = mqtt.connect(broker.value)
-  // client.subscribe("mqtt/demox")
+  
 
   btnSubscribe.addEventListener('click', function (e) {
     e.preventDefault();
-    console.log("mqtt/" + subTopic.value)
+
+    console.log("Subscribe{ topic: " + subTopic.value+" }");
     client.subscribe("mqtt/" + subTopic.value);
+
     btnUnsubscribe.disabled = false;
     btnSubscribe.disabled = true;
-    let finalTopic = topic.slice(5);
-    let tbl = document.getElementById('subscriber');
-    let tbody = document.getElementById('submsg');
-    let tr = document.createElement('tr');
-    let msgTopic = document.createElement('td');
-    let msgTime = document.createElement('td');
-    msgTopic.appendChild(document.createTextNode(finalTopic));
-    msgTime.appendChild(document.createTextNode(moment().format('llll')));
-    tr.appendChild(msgTopic);
-    tr.appendChild(msgTime);
-    tbody.appendChild(tr);
-    tbl.appendChild(tbody);
+    
 
   })
 
@@ -76,7 +67,7 @@ btnConnect.addEventListener('click', function (e) {
 
   client.on("message", function (topic, payload) {
     let finalTopic = topic.slice(5);
-    console.log([finalTopic, payload].join(": "));
+    console.log("Received { topic: "+finalTopic+"; payload: "+ payload+" }");
     let tbl = document.getElementById('receiver');
     let tbody = document.getElementById('msg');
     let tr = document.createElement('tr');
