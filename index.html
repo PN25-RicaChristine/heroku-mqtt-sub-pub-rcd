@@ -23,7 +23,7 @@
         <div class="col-lg-4" style="border:solid 1px black">
           <h1>Broker</h1>
           Address: <input id="broker" type="text" value="wss://test.mosquitto.org:8081/mqtt"><br><br>
-          <input id="connect" class="btn btn-primary" type="button" value="Connect">
+          <input id="connect" onclick="connectFunc()" class="btn btn-primary" value="Connect">
           <input id="disconnect" class="btn btn-danger" type="button" value="Disconnect" disabled><br><br>
           Status: <input id="status" class="btn btn-default" type="button" value="_______________________"
             disabled><br><br>
@@ -31,15 +31,15 @@
         <!-- Publisher -->
         <div class="col-lg-4" style="border:solid 1px black">
           <h1>Publish</h1>
-          Topic: <input id="pubTopic" type="text" placeholder="Enter Topic here"><br><br>
-          Payload: <input id="pubPayload" type="text" placeholder="Enter Payload here"><br><br>
-          <input id="btnPublish" class="btn btn-primary" type="button" value="Publish">       
+          Topic: <input id="pub-topic" type="text" placeholder="Enter Topic here"><br><br>
+          Payload: <input id="pub-payload" type="text" placeholder="Enter Payload here"><br><br>
+          <input id="publish" class="btn btn-primary" onclick="publishFunc()" value="Publish">       
         </div>
         <!-- Subscriber -->
         <div class="col-lg-4" style="border:solid 1px black">
           <h1>Subscribe</h1>
-          Topic: <input id="subTopic" type="text" placeholder="Enter topic to subscribe"><br><br>
-          <input id="btnSubscribe" class="btn btn-success" type="button" value="Subscribe">
+          Topic: <input id="sub-topic" type="text" placeholder="Enter topic to subscribe"><br><br>
+          <input id="subscribe" onclick="subscribeFunc()" class="btn btn-success" type="button" value="Subscribe">
           <input id="btnUnsubscribe" class="btn btn-warning" type="button" value="Unsubscribe" disabled>
         </div>
 
