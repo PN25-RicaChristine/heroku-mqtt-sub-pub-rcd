@@ -13,6 +13,20 @@ function connectFunc(){
   client.on("message", function (topic, payload) {
     // console.log([topic, payload].join(": "));
     console.log("Received { topic: " + topic + "; payload: " + payload + " }");
+    let tbl = document.getElementById('receiver');
+    let tbody = document.getElementById('msg');
+     let tr = document.createElement('tr');
+     let msgTopic = document.createElement('td');
+     let msgPayload = document.createElement('td');
+     let msgTime = document.createElement('td');
+     msgTopic.appendChild(document.createTextNode(topic));
+     msgPayload.appendChild(document.createTextNode(payload));
+     msgTime.appendChild(document.createTextNode(moment().format('llll')));
+     tr.appendChild(msgTopic);
+     tr.appendChild(msgPayload);
+     tr.appendChild(msgTime);
+     tbody.appendChild(tr);
+     tbl.appendChild(tbody);
     // client.end();
   })
 
@@ -23,6 +37,20 @@ function publishFunc(){
   client.publish(document.getElementById('pub-topic').value, document.getElementById('pub-payload').value)
   console.log("Published { topic: " + document.getElementById('pub-topic').value
   + "; payload: " + document.getElementById('pub-payload').value + " }");
+  let tbl = document.getElementById('publisher');
+  let tbody = document.getElementById('pubmsg');
+  let tr = document.createElement('tr');
+  let msgTopic = document.createElement('td');
+  let msgPayload = document.createElement('td');
+  let msgTime = document.createElement('td');
+  msgTopic.appendChild(document.createTextNode(document.getElementById('pub-topic').value));
+  msgPayload.appendChild(document.createTextNode(document.getElementById('pub-payload').value));
+  msgTime.appendChild(document.createTextNode(moment().format('llll')));
+  tr.appendChild(msgTopic);
+  tr.appendChild(msgPayload);
+  tr.appendChild(msgTime);
+  tbody.appendChild(tr);
+  tbl.appendChild(tbody);
   // console.log(document.getElementById('pub-topic').value);
   // console.log(document.getElementById('pub-payload').value);
 }
@@ -32,6 +60,17 @@ function subscribeFunc(){
   // client.subscribe("mqtt/demo");
   client.subscribe(document.getElementById('sub-topic').value);
   console.log("Subscribe { topic: " + document.getElementById('sub-topic').value + " }");
+    let tbl = document.getElementById('subscriber');
+    let tbody = document.getElementById('submsg');
+     let tr = document.createElement('tr');
+     let msgTopic = document.createElement('td');
+    let msgTime = document.createElement('td');
+    msgTopic.appendChild(document.createTextNode(document.getElementById('sub-topic').value));
+    msgTime.appendChild(document.createTextNode(moment().format('llll')));
+    tr.appendChild(msgTopic);
+     tr.appendChild(msgTime);
+     tbody.appendChild(tr);
+     tbl.appendChild(tbody);
 }
 // //broker
 // var btnConnect = document.getElementById('connect');
