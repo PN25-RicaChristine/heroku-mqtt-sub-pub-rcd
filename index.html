@@ -24,7 +24,7 @@
           <h1>Broker</h1>
           Address: <input id="broker" type="text" value="wss://test.mosquitto.org:8081/mqtt"><br><br>
           <input id="connect" onclick="connectFunc()" class="btn btn-primary" value="Connect">
-          <input id="disconnect" class="btn btn-danger" type="button" value="Disconnect" disabled><br><br>
+          <input id="disconnect" onclick="disconnectFunc()" class="btn btn-danger" type="button" value="Disconnect" disabled><br><br>
           Status: <input id="status" class="btn btn-default" type="button" value="_______________________"
             disabled><br><br>
         </div>
@@ -40,7 +40,7 @@
           <h1>Subscribe</h1>
           Topic: <input id="sub-topic" type="text" placeholder="Enter topic to subscribe"><br><br>
           <input id="subscribe" onclick="subscribeFunc()" class="btn btn-success" type="button" value="Subscribe">
-          <input id="btnUnsubscribe" class="btn btn-warning" type="button" value="Unsubscribe" disabled>
+          <input id="btnUnsubscribe" onclick="unsubscribeFunc()" class="btn btn-warning" type="button" value="Unsubscribe" disabled>
         </div>
 
       </div>
