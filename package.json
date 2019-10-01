@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jun Rey Ansing",
+  "author": "Rica Christine Debuayan",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/junreycloudstrife/mows.git"
+    "url": "git+https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io.git"
   },
   "keywords": [
     "mows",
@@ -18,7 +18,10 @@
     "websocket"
   ],
   "bugs": {
-    "url": "https://github.com/junreycloudstrife/mows/issues"
+    "url": "https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io/issues"
   },
-  "homepage": "https://github.com/junreycloudstrife/mows#readme"
+  "homepage": "https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io/blob/master/README.mds",
+  "engines": {
+    "node": "10.15"
+}
 }
