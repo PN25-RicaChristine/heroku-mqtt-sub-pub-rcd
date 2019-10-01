@@ -23,5 +23,8 @@
   "homepage": "https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io/blob/master/README.mds",
   "engines": {
     "node": "10.15"
-}
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
