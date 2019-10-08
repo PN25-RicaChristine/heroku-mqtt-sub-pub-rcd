@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io.git"
+    "url": "git+https://github.com/PN25-RicaChristine/heroku-mqtt-sub-pub-rcd.git"
   },
   "keywords": [
     "mows",
@@ -18,9 +18,9 @@
     "websocket"
   ],
   "bugs": {
-    "url": "https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io/issues"
+    "url": "https://github.com/PN25-RicaChristine/heroku-mqtt-sub-pub-rcd/issues"
   },
-  "homepage": "https://github.com/PN25-RicaChristine/PN25-RicaChristine.github.io/blob/master/README.mds",
+  "homepage": "https://github.com/PN25-RicaChristine/heroku-mqtt-sub-pub-rcd/blob/master/README.mds",
   "engines": {
     "node": "10.15"
   },
